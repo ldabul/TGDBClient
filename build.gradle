@@ -1,0 +1,28 @@
+apply plugin: 'java'
+apply plugin: 'maven-publish'
+
+sourceCompatibility = 1.7
+
+publishing {
+	publications {
+		maven(MavenPublication) {
+			groupId = 'net.tgdb'
+			version = '0.1'
+			artifactId 'tgdb-client'
+			
+			from components.java
+		}
+	}
+}
+	
+dependencies {
+	compile 'org.springframework:spring-web:4.1.5.RELEASE'
+	compile 'org.apache.httpcomponents:httpclient:4.4'
+
+	testCompile 'junit:junit:4.12'
+	testCompile 'org.springframework:spring-test:4.1.5.RELEASE'
+}
+
+repositories {
+	mavenCentral()
+}
