@@ -32,6 +32,6 @@ public class TGDBClientTest {
 
     @Test
     public void getGameTest1() {
-        Assert.assertNotNull("TGDBClientTest.getGameTest1: expected not null result", tgdbClient.getGame(17L));
+        Assert.assertNotNull("TGDBClientTest.getGameTest1: expected not null result", tgdbClient.getGame(2L));
     }
 }
